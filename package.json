@@ -1,0 +1,31 @@
+{
+  "name": "ontology",
+  "version": "1.0.0",
+  "description": "Game-playing agent AI Ontology",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Csalcedo04/game-playing-agent-Ontology-with-graphQL.git"
+  },
+  "keywords": [
+    "Game-playing",
+    "agent",
+    "AI",
+    "Ontology"
+  ],
+  "author": "Carlos Alberto Salcedo Rodríguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Csalcedo04/game-playing-agent-Ontology-with-graphQL/issues"
+  },
+  "homepage": "https://github.com/Csalcedo04/game-playing-agent-Ontology-with-graphQL#readme",
+  "dependencies": {
+    "@apollo/server": "^4.9.4",
+    "graphql": "^16.8.1"
+  }
+}
