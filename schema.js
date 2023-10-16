@@ -1,12 +1,12 @@
-export const typeDefs = `#graphql
-  # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+export const typeDefs = `
+    #graphql
   
   type AiModel{
     id: ID!,
     game_playerID: ID!,
     name: String!,
     programingLanguage: String!,
-    developingEnviroment: String!,
+    developingEnviroment: [String]!,
   }
   
   type GameAgent {
@@ -16,7 +16,7 @@ export const typeDefs = `#graphql
     dificultLevel: Int,
     winRatio: Int,
     points: Int,
-    aiModel: [AiModel]
+    aiModel: AiModel
   }
 
   type GameBoard{
@@ -26,26 +26,31 @@ export const typeDefs = `#graphql
     movesMade: Int,
     dimensions:Int,
     GUI: String,
-    gameAgent: [GameAgent]
+    gameAgent: GameAgent
   }
   type Game {
     id: ID!
     name: String!,
     numberOfPlayers: Int!,
     rules: String,
-    gameBoard: [GameBoard]
+    gameBoard: GameBoard
   }
   type Query {
     games: [Game]
-    game(id:ID!): Game
-
-    gameBoards:[GameBoard]
-    gameBoard(id:ID!): GameBoard
-
-    gameAgents: [GameAgent]
-    gameAgent(id:ID!): GameAgent
-
-    aiModels: [AiModel]
-    aiModel(id:ID!): AiModel
   }
+  
+  
 `;
+// type Query {
+//     games: [Game]
+//     game(id:ID!): Game
+
+//     gameBoards:[GameBoard]
+//     gameBoard(id:ID!): GameBoard
+
+//     gameAgents: [GameAgent]
+//     gameAgent(id:ID!): GameAgent
+
+//     aiModels: [AiModel]
+//     aiModel(id:ID!): AiModel
+//   }
