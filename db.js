@@ -1,5 +1,6 @@
 let aiModels = [
     {
+        game_id: 123456,
         id: 123,
         game_playerID: 1234,
         name: "sample text",
@@ -9,6 +10,7 @@ let aiModels = [
 ]
 let gamesAgents = [
     {
+        game_id: 123456,
         id: 1234,
         aimodelID:123 ,
         name: "Bot",
@@ -21,6 +23,7 @@ let gamesAgents = [
 ];
 let gamesBoards = [
     {
+        game_id: 123456,
         id: 12345,
         name: "chess Board",
         playerID:1234,
@@ -32,12 +35,12 @@ let gamesBoards = [
 ];
 let games = [
     {
-        id: 123456,
-        gamesBoardID:12345,
-        name: "chess",
-        numberOfPlayers: 2,
-        rules: "Lorem Ipsum",
-        gamesBoards: [gamesBoards]
+        game_id: 123456,
+        // gamesBoardID:12345,
+        // name: "chess",
+        // numberOfPlayers: 2,
+        // rules: "Lorem Ipsum",
+        // gamesBoards: [gamesBoards]
     },
 ];
 

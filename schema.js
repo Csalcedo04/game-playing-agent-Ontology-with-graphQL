@@ -1,7 +1,8 @@
 export const typeDefs = `
     #graphql
   
-  type AiModel{
+  type AiModel implements Game{
+    game_id: ID!,
     id: ID!,
     game_playerID: ID!,
     name: String!,
@@ -9,7 +10,8 @@ export const typeDefs = `
     developingEnviroment: [String]!,
   }
   
-  type GameAgent {
+  type GameAgent implements Game{
+    game_id: ID!,
     id:ID!
     aimodelID: ID!,
     name: String,
@@ -19,7 +21,8 @@ export const typeDefs = `
     aiModel: AiModel
   }
 
-  type GameBoard{
+  type GameBoard implements Game{
+    game_id: ID!,
     id:ID!,
     playerID: ID!,
     name: String!,
@@ -28,15 +31,13 @@ export const typeDefs = `
     GUI: String,
     gameAgent: GameAgent
   }
-  type Game {
-    id: ID!
-    name: String!,
-    numberOfPlayers: Int!,
-    rules: String,
-    gameBoard: GameBoard
+  interface  Game {
+    game_id: ID!
   }
   type Query {
+    game: [Game!]!,
     games: [Game]
+    
   }
   
   
@@ -53,4 +54,4 @@ export const typeDefs = `
 
 //     aiModels: [AiModel]
 //     aiModel(id:ID!): AiModel
-//   }
+//   }  
