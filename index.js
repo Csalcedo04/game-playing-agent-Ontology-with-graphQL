@@ -13,29 +13,3 @@ const { url } = await startStandaloneServer(server, {
 });
   
 console.log(`🚀  Server ready at: ${url}`);
-
-// const json = {
-//     "game": {
-//         "name": String,
-//         "numberOfPlayers": Int,
-//         "Rules": String,  
-//         "gameBoard":{
-//             "name": String,
-//             "dimensions":Int,
-//             "movesMade": Int,
-//             "GUI": Blob,
-//             "gamePlayer": {
-//                 "name": String,
-//                 "id": String,
-//                 "dificultLevel": Int,
-//                 "points": Int,
-//                 "winRatio": Int,
-//                 "aiModel":{
-//                     "name": String,
-//                     "programingLanguage": String,
-//                     "developingEnviroment": [String],
-//                 }
-//             },
-//         }
-//     }
-// }

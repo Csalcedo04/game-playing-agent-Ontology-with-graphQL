@@ -1,6 +1,6 @@
 let aiModels = [
     {
-        id: 123,
+        AiModelID: 123,
         game_playerID: 1234,
         name: "sample text",
         programingLanguage: "python",
@@ -9,7 +9,7 @@ let aiModels = [
 ]
 let gamesAgents = [
     {
-        id: 1234,
+        playerID: 1234,
         aimodelID:123 ,
         name: "Bot",
         dificultLevel: 4,
@@ -21,7 +21,7 @@ let gamesAgents = [
 ];
 let gamesBoards = [
     {
-        id: 12345,
+        gamesBoardID: 12345,
         name: "chess Board",
         playerID:1234,
         movesMade: 30,
@@ -32,7 +32,7 @@ let gamesBoards = [
 ];
 let games = [
     {
-        id: 123456,
+        gameID: 123456,
         gamesBoardID:12345,
         name: "chess",
         numberOfPlayers: 2,

@@ -5,19 +5,19 @@ export const resolvers = {
             return db.games
         },
         game(_, arg) {
-            return db.game.find((games)=> games.id ===arg.id)
+            return db.games.find((games)=> games.id ===arg.id)
         },
         gameBoards(){
             return db.gamesBoards
         },
         gameBoard(_, arg) {
-            return db.gameBoards.find((gameBoard)=> gameBoards.id ===arg.id)
+            return db.gamesBoards.find((gameBoard)=> gameBoards.id ===arg.id)
         },
         gameAgents(){
             return db.gamesAgents
         },
         gameAgent(_, arg) {
-            return db.gameAgents.find((gameAgent)=> gameAgents.id ===arg.id)
+            return db.gamesAgents.find((gameAgent)=> gameAgents.id ===arg.id)
         },
         aiModels (){
             return db.aiModels
