@@ -7,6 +7,7 @@ export const typeDefs = `#graphql
     name: String,
     programingLanguage: String,
     developingEnviroment: String,
+    gameagent:GameAgent
   }
   
   type GameAgent {
@@ -16,7 +17,8 @@ export const typeDefs = `#graphql
     dificultLevel: Int,
     winRatio: Int,
     points: Int,
-    aiModel: [AiModel]
+    aiModel: [AiModel],
+    gameboard :GameBoard,
   }
 
   type GameBoard{
@@ -26,14 +28,16 @@ export const typeDefs = `#graphql
     movesMade: Int,
     dimensions:Int,
     GUI: String,
-    gameAgent: [GameAgent]
+    gameAgent: [GameAgent],
+    game : Game,
   }
   type Game {
+    gameBoardID:ID!
     gameID: ID!
     name: String,
     numberOfPlayers: Int,
     rules: String,
-    gameBoard: [GameBoard]
+    gameBoard: [GameBoard],
   }
   type Query {
     games: [Game]
